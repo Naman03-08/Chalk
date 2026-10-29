@@ -62,7 +62,7 @@ All work starts from an [issue](https://github.com/BeNikk/Chalk/issues). Issues 
 |---|---|
 | `first-timer` | Your very first PR. Tiny, with step-by-step hints. Only one per person, so everyone gets a turn. |
 | `good-first-issue` | Small and well explained. Good for your 2nd to 5th PR. |
-| `intermediate` | Needs you to read more of the code and make a few decisions. |
+| `intermediate` | Needs you to read more of the code and make a few decisions. Do not make unnecessary  |
 
 **What part of the project:**
 
