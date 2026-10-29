@@ -4,6 +4,7 @@ Welcome! Chalk is built by students, many of whom are making their very first op
 
 This guide covers:
 
+
 1. [The one rule](#the-one-rule)
 2. [Setting up](#setting-up)
 3. [Picking an issue](#picking-an-issue)
