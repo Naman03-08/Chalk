@@ -17,6 +17,8 @@ This guide covers:
 
 ---
 
+
+
 ## The one rule
 
 **Only submit code you understand.**
