@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: var(--header-height);
 }
 
 .site-nav {
@@ -71,6 +71,103 @@
   width: 180px;
 }
 
+/* App pages: feed, write, a single post */
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5);
+}
+
+.page--wide {
+  max-width: 1000px;
+}
+
+.page-heading {
+  margin-bottom: var(--space-6);
+}
+
+.post-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* The rules page: a readable column of short sections */
+
+.rules section + section {
+  margin-top: var(--space-7);
+}
+
+.rules h2 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-h3);
+}
+
+.rules p + p {
+  margin-top: var(--space-3);
+}
+
+.not-found h1 {
+  margin-top: var(--space-5);
+}
+
+.not-found .actions {
+  justify-content: center;
+}
+
+/* Profile pages: the theme's colors and font fill the whole area under the header */
+
+.profile {
+  min-height: calc(100vh - var(--header-height));
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+
+.profile-details {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-2);
+}
+
+.settings {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+/* Let the file picker shrink on phones instead of pushing the page wider than the screen. */
+.settings-section {
+  min-width: 0;
+}
+
+.photo-row .field {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+/* Narrow pages: sign up, log in and the other account forms */
+
+.narrow-page {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5);
+}
+
 /* Grids */
 
 /* As many 240px+ columns as fit: one on a phone, three on a laptop. */
@@ -110,6 +207,11 @@
 @media (max-width: 720px) {
   .section {
     padding: var(--space-7) 0;
+  }
+
+  .page,
+  .narrow-page {
+    padding: var(--space-6) var(--space-4);
   }
 
   .split {

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Feed · Chalk</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Chalk
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a class="nav-link nav-link--extra" href="feed.html">Feed</a>
+          <a class="nav-link nav-link--extra" href="rules.html">Rules</a>
+          <a class="nav-link" href="login.html">Log in</a>
+          <a class="button button--primary button--small" href="signup.html">Start writing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page page--wide">
+      <div class="feed-layout">
+        <div>
+          <div class="feed-banner">
+            <div class="page-heading">
+              <h1>The feed</h1>
+              <p class="lead" id="greeting">What campus is writing, newest first.</p>
+            </div>
+            <div class="feed-banner-crowd">
+              <img class="illustration" src="illustrations/reader.svg" alt="" />
+              <img class="illustration" src="illustrations/coffee.svg" alt="" />
+              <img class="illustration" src="illustrations/writer.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="label-filter" role="group" aria-label="Show only one label">
+            <button type="button" data-label="" aria-pressed="false">All</button>
+            <button type="button" data-label="following" aria-pressed="false" hidden>Following</button>
+            <button type="button" data-label="rant" aria-pressed="false">#rant</button>
+            <button type="button" data-label="poetry" aria-pressed="false">#poetry</button>
+            <button type="button" data-label="mess" aria-pressed="false">#mess</button>
+            <button type="button" data-label="music" aria-pressed="false">#music</button>
+            <button type="button" data-label="fixit" aria-pressed="false">#fixit</button>
+          </div>
+
+          <p class="form-message form-message--error" id="feed-error" role="alert"></p>
+          <div class="post-list" id="posts"></div>
+          <button class="button load-more" id="load-more" type="button" hidden>Load more</button>
+        </div>
+
+        <aside class="feed-side" aria-label="Write and labels">
+          <div class="side-card">
+            <img class="illustration" src="illustrations/idea.svg" alt="" />
+            <p class="hand">Something on your mind?</p>
+            <a class="button button--primary" href="write.html">Write a post</a>
+          </div>
+
+          <div>
+            <h2 class="side-heading">Labels</h2>
+            <div class="label-notes">
+              <a class="label-note" data-label="rant" href="feed.html?label=rant"><strong>#rant</strong><span>Let it out.</span></a>
+              <a class="label-note" data-label="poetry" href="feed.html?label=poetry"><strong>#poetry</strong><span>Nobody's grading this.</span></a>
+              <a class="label-note" data-label="mess" href="feed.html?label=mess"><strong>#mess</strong><span>Half-thoughts welcome.</span></a>
+              <a class="label-note" data-label="music" href="feed.html?label=music"><strong>#music</strong><span>What's on repeat?</span></a>
+              <a class="label-note" data-label="fixit" href="feed.html?label=fixit"><strong>#fixit</strong><span>Say it so it gets fixed.</span></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script type="module" src="js/pages/feed.js"></script>
+  </body>
+</html>
